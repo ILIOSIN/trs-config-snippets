@@ -1,7 +1,7 @@
 {
   "name": "trs-config-snippet",
   "main": "./lib/trs-config-snippet",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Сниппеты для написания конфигов в TRS19",
   "keywords": [],
   "activationCommands": {
