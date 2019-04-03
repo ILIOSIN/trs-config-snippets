@@ -82,3 +82,33 @@ $2
           }
         }
 """
+    'Добавить lever':
+      'prefix': 'lever'
+      'body': """${1:levername}
+  {
+    kind                                "lever"
+    mesh                                "${1:levername}.im"
+    att-parent                          "${2:empty}"
+    att                                 "a.${1:levername}"
+    auto-create                         $3
+    angles                              $4,$5
+    limits                              $6,$7
+    radius                              $8
+    mousespeed                          $9
+    tooltip-token                       "${1:empty}"
+  }
+  $10
+"""
+    'Добавить needle':
+      'prefix': 'needle'
+      'body': """${1:needlename}
+  {
+    mesh                                "${1:needlename}.im"
+    auto-create                         1
+    kind                                "needle"
+    att                                 "a.${1:needlename}"
+    limits                              $2,$3
+    angles                              $4,$5
+  }
+  $6
+"""
