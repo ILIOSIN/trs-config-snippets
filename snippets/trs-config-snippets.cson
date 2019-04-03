@@ -1,0 +1,84 @@
+'.text.plain':
+
+    'Прописать Kuid':
+        'prefix':'kuid'
+        'body': """kuid                                    <kuid:$1:$2>
+        $3
+        """
+
+
+    'Создать mesh-table':
+        'prefix':'mshtbl'
+        'body':"""mesh-table
+        {
+        $1
+        }
+"""
+    'Добавить меш с анимацией':
+        'prefix':'msh-anim'
+        'body':"""  ${1:default}
+          {
+              auto-create                         ${2:1}
+              mesh                                "${3:meshname}.trainzmesh"
+              anim                                "${3:animationname}.kin"
+              animation-loop-speed                ${4:1}
+          }
+"""
+    'Добавить меш':
+        'prefix':'msh'
+        'body':"""  ${1:default}
+          {
+              auto-create                         ${2:1}
+              mesh                                "${3:meshname}.trainzmesh"
+          }
+"""
+
+    'Указать trainz-build':
+        'prefix':'bld'
+        'body': """trainz-build                            $1'
+$2
+"""
+
+    'Указать kind':
+        'prefix':'knd'
+        'body': """kind                                    "${1:scenery}"
+        $2
+        """
+        'description': 'Тип вашего объекта'
+        'descriptionMoreURL': 'http://online.ts2009.com/mediaWiki/index.php/Category:Asset_KIND'
+
+    'Указать category-era':
+        'prefix':'c-e'
+        'body': 'category-era                            "1950s;1960s;1970s;1980s;1990s;2000s;2010s"'
+
+    'Указать category-class':
+        'prefix':'c-c'
+        'body': """category-class                          "$1"
+          $2
+"""
+        'description': 'Класс вашего объекта'
+        'descriptionMoreURL': 'http://online.ts2009.com/mediaWiki/index.php/Category-class'
+
+    'Указать скрипт':
+        'prefix':'gs'
+        'body': """script                                  "${1:script}.gs"
+        class                                   "${2:ScriptClass}"
+        $3
+"""
+
+    'Указать category-region':
+        'prefix':'c-r'
+        'body': 'category-region                         "RU;UA"'
+
+    'Указать превью':
+        'prefix':'thmb'
+        'body':"""thumbnails
+        {
+          0
+          {
+            image                               "${1:0}.jpg"
+            width                               ${2:240}
+            height                              ${3:180}
+          }
+        }
+"""
